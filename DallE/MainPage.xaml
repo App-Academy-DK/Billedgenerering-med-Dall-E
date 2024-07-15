@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DallE.MainPage">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Column 1 -->
+            <Label Grid.Row="0" Grid.Column="0" Text="København" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Frame Grid.Row="1" Grid.Column="0" Padding="0" BorderColor="Black">
+                <Image x:Name="CopenhagenImage" Source="cphloading.png" Aspect="AspectFit"
+                   HeightRequest="{Binding Width, Source={RelativeSource Self}}" />
+            </Frame>
+            <Label x:Name="CopenhagenStatus" Grid.Row="2" Grid.Column="0" Text="Status: Online" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <!-- Column 2 -->
+            <Label Grid.Row="0" Grid.Column="1" Text="Paris" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Frame Grid.Row="1" Grid.Column="1" Padding="0" BorderColor="Black">
+                <Image x:Name="ParisImage" Source="parisloading.png" Aspect="AspectFit"
+                    HeightRequest="{Binding Width, Source={RelativeSource Self}}" />
+                </Frame>
+            <Label x:Name="ParisStatus" Grid.Row="2" Grid.Column="1" Text="Status: Online" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <!-- Column 3 -->
+            <Label Grid.Row="0" Grid.Column="2" Text="New York" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Frame Grid.Row="1" Grid.Column="2" Padding="0" BorderColor="Black">
+                <Image x:Name="NewYorkImage" Source="nyloading.png" Aspect="AspectFit"
+                    HeightRequest="{Binding Width, Source={RelativeSource Self}}" />
+            </Frame>
+            <Label x:Name="NewYorkStatus" Grid.Row="2" Grid.Column="2" Text="Status: Offline" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+</ContentPage>
